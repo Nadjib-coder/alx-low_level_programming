@@ -1,1 +1,1 @@
-hello this is my first readme file
+this repo contain directorys for c programming tasks of alx se holberton school program
