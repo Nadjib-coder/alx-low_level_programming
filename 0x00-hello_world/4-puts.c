@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
- * main - Entry point
- * Return: "Programming is like building a multilingual puzzle
+ * main: A program that print a line using puts function
+ * Return: 0 (Success)
  */
 int main(void)
 {
