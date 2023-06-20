@@ -9,5 +9,3 @@ This directory contain 11 mandatory task and 5 advance (optional) task in the c-
 3-islower.c: a function that checks for lowercase character.
 
 4-isalpha.c: a function that checks for alphabetic character.
-
-
