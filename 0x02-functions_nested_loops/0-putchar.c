@@ -1,31 +1,31 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include "main.h"
-
+#include <unistd.h>
 /**
- * main - A program that prints _putchar
- * Return: 0 (Success)
- */
-int main(void)
-{
-	char c[] = "_putchar";
-	int i;
-
-	for (i = 0; i != '\0'; i++)
-	{
-		_putchar(c[i]);
-	}
-	_putchar('\n');
-	return (0);
-}
-/**
- * _putchar - a function writes the character c to stdout
- * @c: the character to print
+ * _putchar - Writes a character to the standard output
+ * @c: The character to be written
  *
- * Return: on success 1.
- * on error, -1 is returned, and errno is set appropriately/
+ * Return: On success, returns the number of bytes written.
+ * On error, returns -1 and sets errno appropriately.
  */
 int _putchar(char c)
 {
 	return (write(1, &c, 1));
 }
+/**
+ * main - Entry point of the program
+ *
+ * Return: Always 0 (indicating success)
+ */
+int main(void)
+{
+	_putchar('_');
+	_putchar('p');
+	_putchar('u');
+	_putchar('t');
+	_putchar('c');
+	_putchar('h');
+	_putchar('a');
+	_putchar('r');
+	_putchar('\n');
+	return (0);
+}
+
