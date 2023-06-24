@@ -1,21 +1,19 @@
 #include <stdio.h>
 #include <stdlib.h>
+
 /**
- * main - Entry point
- *
- * prints the alphabet in revrse
- * Return: 0 Always
+ * main - A program that prints the lowercase aplohabet in reverse
+ * Return: 0 (Success)
  */
 int main(void)
 {
-	char msg[27] = "zyxwvutsrqponmlkjihgfedcba";
-	int i = 0;
+	char ch;
 
-	while (msg[i] != '\0')
+	for (ch = 'z'; ch >= 'a'; ch--)
 	{
-		putchar(msg[i]);
-		i++;
+		putchar(ch);
 	}
 	putchar('\n');
-return (0);
+	return (0);
 }
+
