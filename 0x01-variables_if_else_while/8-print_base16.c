@@ -12,9 +12,11 @@ int main(void)
 
 	for (i = 0; i < 16; i++)
 	{
-		char output = (i < 10) ? (i + '0') : (i - 10 + 'a');
+		if (i < 10)
+			putchar(i + '0');
 
-		putchar(output);
+		else
+			putchar(i - 10 + 'a');
 	}
 	putchar('\n');
 	return (0);
