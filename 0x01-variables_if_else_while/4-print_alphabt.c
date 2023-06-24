@@ -1,21 +1,23 @@
 #include <stdio.h>
 #include <stdlib.h>
+
 /**
- * main - Entry point
- * prints abcdfghijklmnoprstuvwxyz
- * Return: 0 always
-*/
+ * main - A program that prints the alphabet in lowercase
+ * all the letters except q and e
+ * Return: 0 (Success)
+ */
 int main(void)
 {
-	char msg[25] = "abcdfghijklmnoprstuvwxyz";
-	int i = 0;
+        char ch;
 
-	while (msg[i] != '\0')
-	{
-		putchar(msg[i]);
-		i++;
-	}
-	putchar('\n');
-return (0);
+        for (ch = 'a'; ch <= 'z'; ch++)
+        {
+                if (ch != 'q' && ch != 'e')
+                {
+                        putchar(ch);
+                }
+        }
+        putchar('\n');
+        return (0);
 }
 
