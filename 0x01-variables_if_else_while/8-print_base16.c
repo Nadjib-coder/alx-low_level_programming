@@ -1,22 +1,25 @@
 #include <stdio.h>
 #include <stdlib.h>
+
 /**
- * main - Entry point
- *
- * prints the base 16
- * 0123456789abcdef
- * Return: 0 Always
+ * main - A program that prints all the numbers of base 16
+ * is lowercase
+ * Return: 0 (Success)
  */
 int main(void)
 {
-	char msg[17] = "0123456789abcdef";
-	int i = 0;
+	int  i;
 
-	while (msg[i] != '\0')
+	for (i = 0; i < 16; i++)
 	{
-		putchar(msg[i]);
-		i++;
+		if (i < 10)
+		{
+			char output = (i < 10) ? (i + '0') : (i - 10 + 'a');
+
+			putchar(output);
+		}
 	}
 	putchar('\n');
-return (0);
+	return (0);
 }
+
