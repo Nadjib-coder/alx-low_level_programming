@@ -9,7 +9,7 @@
 int _strlen(char *s)
 {
 	int i;
-	int *p;
+	char *p;
 	int counter = 0;
 
 	p = s;
