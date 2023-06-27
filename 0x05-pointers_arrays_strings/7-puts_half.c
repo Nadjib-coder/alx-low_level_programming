@@ -4,7 +4,7 @@
 /**
  * puts_half - a function that prints half of a string, followed by a new line.
  * @str: the string.
- * Return: Nothing.
+ * Return: 0 (Success).
  */
 void puts_half(char *str)
 {
@@ -34,6 +34,7 @@ void puts_half(char *str)
 		}
 		_putchar('\n');
 	}
+	return (0);
 }
 
 
