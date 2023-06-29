@@ -7,12 +7,12 @@
  * @n: number of bytes
  * Return: dest
  */
-char *_strncat(*dest, char *src, int n);
+char *_strncat(char *dest, char *src, int n)
 {
 	int length1 = 0;
 	int length2 = 0;
 
-	while (dest[length1] != '\0');
+	while (dest[length1] != '\0')
 	{
 		length1++;
 	}
