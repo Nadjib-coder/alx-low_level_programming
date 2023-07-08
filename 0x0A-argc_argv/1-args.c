@@ -10,9 +10,10 @@
  * command line arguments
  * Return: 0 (Success).
  */
-int main(int args, char *argv[] __attribute__((unused)))
+int main(int argc, char *argv[] __attribute__((unused)))
 {
-	int num = args - 1;
+	int num = argc - 1;
+
 	printf("%d\n", num);
 	return (0);
 }
