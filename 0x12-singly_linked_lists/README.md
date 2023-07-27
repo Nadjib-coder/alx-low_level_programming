@@ -1,4 +1,4 @@
-this repo for 0x12. C - Singly linked lists tasks
+this Directory for 0x12. C - Singly linked lists tasks
 
 0. Print list
 mandatory
