@@ -1,7 +1,4 @@
 #include "lists.h"
-#include <string.h>
-#include <stdlib.h>
-
 
 /**
  * add_node -  a function that adds a new node at
