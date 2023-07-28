@@ -1,6 +1,6 @@
-	global   prgm
+	global   main
 	  extern    printf
-prgm:
+main:
 	  mov   edi, format
 	  xor   eax, eax
 	  call  printf
