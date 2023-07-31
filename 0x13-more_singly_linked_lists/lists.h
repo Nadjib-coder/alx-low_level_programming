@@ -21,5 +21,6 @@ typedef struct listint_s
 
 /* function declaration prototype */
 int _putchar(char c);
+size_t print_listint(const listint_t *h);
 
 #endif
