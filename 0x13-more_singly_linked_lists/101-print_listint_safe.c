@@ -33,7 +33,7 @@ size_t looped_listint_len(const listint_t *head)
 				nodes++;
 				slow = slow->next;
 			}
-			return nodes;
+			return (nodes);
 		}
 	}
 	return (0);
