@@ -12,29 +12,29 @@ size_t free_listint_safe(listint_t **h)
 	unsigned int length = 0;
 	int dif;
 
-	if (!h || !*h)
+	if (!h || !(*h))
 	{
 		return (0);
 	}
 	while (*h)
 	{
-		dif = *h - (*h)->next;
+		dif = (*h) - (*h)->next;
 		if (dif > 0)
 		{
 			temp = (*h)->next;
 			free(*h);
-			*h = temp;
+			(*h) = temp;
 			length++;
 		}
 		else
 		{
 			free(*h);
-			*h = NULL;
+			(*h) = NULL;
 			length++;
 			break;
 		}
 	}
-	*h = NULL;
+	(*h) = NULL;
 	return (length);
 }
 
