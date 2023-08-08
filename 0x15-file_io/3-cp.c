@@ -14,14 +14,14 @@ char *create_buff(char *file)
 
 	if (buff == NULL)
 	{
-		dprintf(STDERR_FILENO,"Error: Can't write to %s\n", file);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file);
 		exit(99);
 	}
 	return (buff);
 }
 /**
  * close_file - Closes file descriptors.
- * @fd: The file descriptor to be closed.
+ * @fp: The file descriptor to be closed.
  */
 void close_file(int fp)
 {
@@ -56,14 +56,14 @@ int main(int argc, char *argv[])
 	do {
 		if (from == -1 || r == -1)
 		{
-			dprintf(STDERR_FILENO,"Error: Can't read from file %s\n", argv[1]);
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 			free(buff);
 			exit(98);
 		}
 		w = write(dest, buff, r);
 		if (dest == -1 || w == -1)
 		{
-			dprintf(STDERR_FILENO,"Error: Can't write to %s\n", argv[2]);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			free(buff);
 			exit(99);
 		}
