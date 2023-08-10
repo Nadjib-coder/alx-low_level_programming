@@ -52,7 +52,7 @@ int main(int argc, char *argv[])
 	dest = open(argv[2], O_WRONLY | O_TRUNC);
 	if (dest == -1)
 	{
-		dest = open(argv[2], O_CREAT | O_WRONLY, 0644);
+		dest = open(argv[2], O_CREAT | O_WRONLY, 0664);
 	}
 	w = write(dest, buffer, r);
 	if (dest == -1 || w == -1)
