@@ -1,26 +1,29 @@
 #include "main.h"
 
+/* function declaration */
+void close_file(int fp);
+
 /**
  * close_file - Closes file descriptors.
- * @fb: The file desciptor to be closed.
+ * @fp: The file desciptor to be closed.
  */
 void close_file(int fp)
 {
-        int x;
+	int x;
 
-        x = close(fp);
-        if (x == -1)
-        {
-                dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fp);
-                exit(100);
-        }
+	x = close(fp);
+	if (x == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fp);
+		exit(100);
+	}
 }
 
 /**
- * main - entry point
+ * main - entry point to the program.
  * @argc: the number of argument.
  * @argv: the arguments.
- * Return 0 (Success).
+ * Return: 0 (Success).
  */
 int main(int argc, char *argv[])
 {
