@@ -43,24 +43,27 @@ int main(int argc, char *argv[])
 	}
 	from = open(argv[1], O_RDONLY);
 	r = read(from, buffer, 1024);
-	if (from == -1 || r == -1)
+	do
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-		free(buffer);
-		exit(98);
-	}
-	dest = open(argv[2], O_WRONLY | O_TRUNC);
-	if (dest == -1)
-	{
-		dest = open(argv[2], O_CREAT | O_WRONLY, 0664);
-	}
-	w = write(dest, buffer, r);
-	if (dest == -1 || w == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-		free(buffer);
-		exit(99);
-	}
+		if (from == -1 || r == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+			free(buffer);
+			exit(98);
+		}
+		dest = open(argv[2], O_WRONLY | O_TRUNC);
+		if (dest == -1)
+		{
+			dest = open(argv[2], O_CREAT | O_WRONLY, 0664);
+		}
+		w = write(dest, buffer, r);
+		if (dest == -1 || w == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+			free(buffer);
+			exit(99);
+		}
+	}while (r > 0)
 	free(buffer);
 	close_file(from);
 	close_file(dest);
