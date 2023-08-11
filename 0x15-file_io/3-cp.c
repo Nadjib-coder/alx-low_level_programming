@@ -1,24 +1,7 @@
 #include "main.h"
 
-char *create_buffer(char *file);
 void close_file(int fd);
 
-/**
- * create_buff - a function that allocates memory for buffer.
- * @file: The pathname of the file.
- * Return: a pointer to the new allocated buffer.
- */
-char *create_buff(char *file)
-{
-	char *buff  = malloc(sizeof(char) * 1024);
-
-	if (buff == NULL)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file);
-		exit(99);
-	}
-	return (buff);
-}
 /**
  * close_file - Closes file descriptors.
  * @fp: The file descriptor to be closed.
@@ -49,7 +32,12 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
-	buff = create_buff(argv[2]);
+	buff = malloc(sizeof(char) * 1024);
+	if (buff == NULL)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+		exit(99);
+	}
 	from = open(argv[1], O_RDONLY);
 	r = read(from, buff, 1024);
 	dest = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
