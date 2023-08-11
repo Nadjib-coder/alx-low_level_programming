@@ -95,16 +95,15 @@ void print_elf_info(const Elf64_Ehdr *header)
 	print_field("Magic", "%.4s", header->e_ident);
 	print_field("Class", "%s", header->e_ident[EI_CLASS] == ELFCLASS32 ?
 			"ELF32" : "ELF64");
-	print_field("Data", "%s", header.e_ident[EI_DATA] == ELFDATA2LSB ?
+	print_field("Data", "%s", header->e_ident[EI_DATA] == ELFDATA2LSB ?
 			"2's complement, little endian" :
-			(header.e_ident[EI_DATA] == ELFDATA2MSB ?
+			(header->e_ident[EI_DATA] == ELFDATA2MSB ?
 			"2's complement, big endian" : "Unknown"));
-	print_field("Version", "%d", header.e_ident[EI_VERSION]);
-	print_field("OS/ABI", "%s", header.e_ident[EI_OSABI] == ELFOSABI_NONE ?
+	print_field("Version", "%d", header->e_ident[EI_VERSION]);
+	print_field("OS/ABI", "%s", header->e_ident[EI_OSABI] == ELFOSABI_NONE ?
 			"UNIX - System V" :
-			(header.e_ident[EI_OSABI] == ELFOSABI_LINUX ? "UNIX - Linux" : "Unknown"));
-	print_field("ABI Version", "%d", header.e_ident[EI_ABIVERSION]);
-	type_str = "Unknown";
+			(header->e_ident[EI_OSABI] == ELFOSABI_LINUX ? "UNIX - Linux" : "Unknown"));
+	print_field("ABI Version", "%d", header->e_ident[EI_ABIVERSION]);
 }
 
 /**
