@@ -17,6 +17,7 @@ int create_file(const char *filename, char *text_content);
 int append_text_to_file(const char *filename, char *text_content);
 void print_osabi(Elf64_Ehdr header);
 void print_osabi_more(Elf64_Ehdr header);
+void print_abiversion(Elf64_Ehdr header);
 void print_type(Elf64_Ehdr header);
 void print_entry(Elf64_Ehdr header);
 
@@ -88,6 +89,17 @@ void print_osabi_more(Elf64_Ehdr header)
 			printf("<unknown: %x>", header.e_ident[EI_OSABI]);
 			break;
 	}
+}
+
+/**
+ * print_abiversion - prints ELF ABI version
+ * @header: the ELF header struct
+ * Return: Nothing
+ */
+void print_abiversion(Elf64_Ehdr header)
+{
+	printf("  ABI Version:                       %d\n",
+			header.e_ident[EI_ABIVERSION]);
 }
 
 /**

@@ -118,9 +118,7 @@ int main(int argc, char **argv)
 	print_data(header);
 	print_version(header);
 	print_osabi(header);
-	print_version(header);
-	printf("  ABI Version:                       %d\n",
-			header.e_ident[EI_ABIVERSION]);
+	print_abiversion(header);
 	print_type(header);
 	print_entry(header);
 	if (close(f))
