@@ -1,13 +1,11 @@
-#include "elf_functions.h"
+#include "main.h"
 
 /**
- * main - Displays the information contained in the
- * ELF header at the start of an ELF file.
- * @argc: The number of arguments supplied to the program.
- * @argv: An array of pointers to the arguments.
- *
- * Return: 0 on success.
- *
+ * main - afunction that displays the information of
+ * ELF header.
+ * @argc: number of arguments
+ * @argv: array of pointer to the arguments.
+ * Return: 0 (Success).
  * Description: If the file is not an ELF File or
  * the function fails - exit code 98.
  */
@@ -37,8 +35,7 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: `%s`: No such file\n", argv[1]);
 		exit(98);
 	}
-
-	check_elf(header->e_idente);
+	check_elff(header->e_idente);
 	printf("ELF Header:\n");
 	print_magic(header->e_idente);
 	print_class(header->e_idente);
@@ -50,6 +47,6 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	print_entry(header->e_entry, header->e_idente);
 
 	free(header);
-	close_elf(f);
+	close_elff(f);
 	return (0);
 }

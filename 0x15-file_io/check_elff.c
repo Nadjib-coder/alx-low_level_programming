@@ -1,11 +1,11 @@
-#include "elf_functions.h"
+#include "main.h"
 
 /**
  * check_elf - a function that checks if a file is an ELF file.
- * @e_ident: A pointer to an array containing the ELF magic numbers.
- * Description: If the file is not an ELF file - exit code 98.
+ * @e_ident: pointer to an array contain ELF magic numbers.
+ * Return: Nothing.
  */
-void check_elf(unsigned char *e_idente)
+void check_elff(unsigned char *e_idente)
 {
 	int i;
 
