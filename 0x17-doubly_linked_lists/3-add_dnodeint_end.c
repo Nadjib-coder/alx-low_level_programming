@@ -5,6 +5,7 @@
  * end of a dlistint_t list.
  * @head: a double pointer to the first node of the list
  * @n: the data for the new node we will add.
+ * Return: a pointer to the new node.
  */
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
