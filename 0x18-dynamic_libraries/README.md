@@ -26,11 +26,13 @@ unsigned int _strspn(char *s, char *accept);
 char *_strpbrk(char *s, char *accept);
 char *_strstr(char *haystack, char *needle);
 If you haven’t coded all of the above functions create empty ones, with the right prototype.
-Don’t forget to push your main.h file in your repository, containing at least all the prototypes of the above function
+Don’t forget to push your main.h file in your repository, containing at least all the prototypes of the above functions.
+
 
 1. Without libraries what have we? We have no past and no future
 mandatory
 Create a script that creates a dynamic library called liball.so from all the .c files that are in the current directory.
+
 
 2. Let's call C functions from Python
 #advanced
@@ -65,4 +67,5 @@ MSS will use the same terminal and session than our mole
 Before running the gm program, MSS always check the content of the directory
 MSS always exit after running the program gm
 TL;DR; This is what is going to happen
+
 
