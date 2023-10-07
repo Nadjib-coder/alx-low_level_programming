@@ -23,7 +23,7 @@ shash_table_t *shash_table_create(unsigned long int size)
 	}
 	for (idx = 0; idx < size; idx++)
 	{
-		ht->array[i] = NULL;
+		hash_t->array[idx] = NULL;
 	}
 	hash_t->shead = NULL;
 	hash_t->stail = NULL;
