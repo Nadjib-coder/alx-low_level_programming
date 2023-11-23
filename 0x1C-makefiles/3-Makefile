@@ -14,7 +14,11 @@ clean:
 
 oclean:
 	$(RM) $(OBJ)
+
 fclean:
 	$(RM) $(OBJ) $(NAME) *~ \#*#
-re:
-	
+
+re: fclean all
+
+.PHONY: all clean oclean fclean re
+
