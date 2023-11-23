@@ -3,6 +3,7 @@
 this module for task 5
 """
 
+
 def island_perimeter(grid):
     """
     this function returns the perimeter of the island described in grid
@@ -22,6 +23,4 @@ def island_perimeter(grid):
                     edges += 1
 
     result = size * 4 - edges * 2
-    
     return result
-
