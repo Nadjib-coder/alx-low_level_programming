@@ -1,0 +1,23 @@
+# Create 4-Makefile
+
+CC = gcc
+SRC = main.c school.c
+OBJ = $(SRC:.c=.0)
+NAME = school
+RM = rm -f
+CFLAGES = -Wall -Werror -Wextra -pedantic
+
+all: $(OBJ)
+	$(CC) $(CFLAGES) $(OBJ) -o $(NAME)
+
+clean:
+	$(RM) *~ \#*# $(NAME)
+
+oclean:
+	$(RM) $(OBJ)
+
+fclean:
+	$(RM) *~ \#*# $(NAME) $(OBJ)
+
+re: all fclean
+
